@@ -1,5 +1,6 @@
 from months import Months
 from fruits_and_veggies import FruitsAndVeggies
+from user_profile import UserProfile
 
 def pi_day():
     check_pi_day = Months(3.14)
@@ -19,6 +20,10 @@ def fruits_and_veggies():
     food_list = ["Peas", "Carrots"]
     print(new_obj.add_from_list(food_list))
 
+# WIP
+# def user_profile():
+#     new_profile = UserProfile
+#     new_profile.input_first_name()
 
 
 
