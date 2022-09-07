@@ -77,15 +77,20 @@ def sort_list(num_list):
     """
     print(f"Unsorted list: {num_list}")
     iteration = 0
-    for i in range(len(num_list) - 1):
-        for j in range(len(num_list) - 1):
-            if num_list[j] > num_list[j + 1]:
-                placeholder = num_list[j]
-                num_list[j] = num_list[j+1]
-                num_list[j+1] = placeholder
-                iteration += 1
-                print(f"Iteration: {iteration} {num_list}")
+    swap = True
+    while swap == True:
+        swap = False
+        for i in range(len(num_list) - 1):
+            for j in range(len(num_list) - 1):
+                if num_list[j] > num_list[j + 1]:
+                    swap = True
+                    placeholder = num_list[j]
+                    num_list[j] = num_list[j+1]
+                    num_list[j+1] = placeholder
+                    iteration += 1
+                    print(f"Iteration: {iteration} {num_list}")
     return num_list
 
 list_to_sort = [3,0,1,8,7,2,5,4,6,9]
+#list_to_sort = [0,1,2,3,4,5,6,7,8,9] # Test for optimized code: Best case scenario, listed already sorted - no need to run entire code
 print(f"Sorted List: {sort_list(list_to_sort)}")
