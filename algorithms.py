@@ -36,7 +36,7 @@ print(less_than_hundred(list_with_below_100)) # all elements beloew 100; return 
 
 
 
-
+# Quadratic: O(n^2)
 def repeated_names(list_of_names):
     """
     Task 3: Repeated Names
@@ -63,7 +63,7 @@ print(repeated_names(list_of_names_without)) # no elements repeated; returns Fal
 
 
 
-# Polynomial: O(n^2)
+# Quadratic: O(n^2)
 def sort_list(num_list):
     """
     Task 4: Sort List
