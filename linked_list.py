@@ -29,3 +29,19 @@ class LinkedList:
             else:
                 current_node = current_node.next
         return False
+
+    def find_node_recursively(self, current_node, value):
+        '''
+        Take in the root node as a parameter, and the value we're trying to find
+        Check if the current node has any value assigned to it (if it's the tail.next node, it will be None and end the function)
+        Check if the current node contains the value we're trying to find -> return True is so.
+        Otherwise, move to the next node (recursively)
+        If at the end of the function we don't find what we're looking for, return False.
+        '''
+
+        if current_node: 
+            if current_node.value == value:
+                return True
+            else:
+                return self.find_node_recursively(current_node.next, value)
+        return False
