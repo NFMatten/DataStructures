@@ -1,29 +1,22 @@
 
 class BinaryNode:
-    def __init__(self, data) -> None:
+    def __init__(self, data):
         self.data = data
         self.left = None
         self.right = None
 
     # Insert a node into the tree
-    def insert_node(self, value_to_add):
-        if value_to_add < self.data:
-            if self.left is None:
-                self.left = BinaryNode(value_to_add)
-                print(f'{value_to_add} Node updated with a left, with a right of {BinaryNode.right}')
-            else:
-                self.left.insert_node(value_to_add)
-                print(f'{value_to_add} Node updated with a left, with a right of {BinaryNode.right}')
-
-        elif value_to_add > self.data:
-            if self.right is None:
-                self.right = BinaryNode(value_to_add)
-                print(f'{value_to_add} Node updated with a right, with a left of {BinaryNode.left}')
-            else:
-                self.left.insert_node(value_to_add)
-                print(f'{value_to_add} Node updated with a right, with a left of {BinaryNode.left}')
+    def insert_node(self, root, value_to_add):
+        if root is None:
+            return BinaryNode(value_to_add)
         else:
-            self.data = value_to_add
+            if root.data <= value_to_add:
+                print(f"{value_to_add} inserted as child of {root.data} to the right")
+                root.right = self.insert_node(root.right, value_to_add)
+            else:
+                print(f"{value_to_add} inserted as child of {root.data} to the left")
+                root.left = self.insert_node(root.left, value_to_add)
+            return root
 
                 
 
