@@ -2,8 +2,15 @@ import implementation
 from linked_list import LinkedList
 from binary_node import BinaryNode
 
-# ## Task: Dictionary, set, tuples ##
+# # ## Task: Dictionary, set, tuples ##
 # def main():
+#     """
+#     -Creates a tuple with months of the year. Find which month 'Pi Day' belongs to
+#     -Create a set with 5 fruits and veggins, add 2 fruits and 2 veggies to set
+#     -Create a dictionary with immediate family memebers
+#     -Create a list with nested dictionaries
+#     """
+
 #     implementation.months_pi_day()
 #     implementation.fruits_and_veggies()
 #     implementation.user_profile()
@@ -30,6 +37,11 @@ from binary_node import BinaryNode
 #     print(linked_list.find_node(100000)) # Find nonexistant node
 
 # def main():
+#     """
+#     Create a linked list by adding nodes to the list
+#     Search for specific nodes in linked list
+#     Extra: Search for specific node recursively
+#     """
 #     linked_list = create_linked_list()
 #     find_node_in_linked_list(linked_list)
 #     print(linked_list.find_node_recursively(linked_list.head, 45)    

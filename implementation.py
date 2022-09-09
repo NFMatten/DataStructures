@@ -66,18 +66,18 @@ of the list storing its own dictionary. Dictionary should contain the following 
 def list_of_dictionaries():
     family_list = [
         {
-            "first_name" : "Nicole",
-            "last_name" : "Churillo",
+            "first_name" : "first name",
+            "last_name" : "last name",
             "relation" : "Sister"
         },
         {
-            "first_name" : "Natalie",
-            "last_name" : "Davidson",
+            "first_name" : "first name",
+            "last_name" : "last name",
             "relation" : "Sister"
         },
         {
-            "first_name" : "Jordan",
-            "last_name" : "Matten",
+            "first_name" : "first name",
+            "last_name" : "last name",
             "relation" : "Wife"
         }
     ]
