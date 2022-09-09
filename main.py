@@ -54,9 +54,12 @@ def main():
     """
     root = BinaryNode(27)
     create_and_print_bst(root)
-    root.search_for_node(10)
 
+    print("\nSearch for node with value 31")
+    root.search_for_node(root, 31)
 
+    print('\nSearch for node with value of 11')
+    root.search_for_node(root, 11)
 
 if __name__ == "__main__":
     main()

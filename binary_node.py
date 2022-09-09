@@ -21,15 +21,17 @@ class BinaryNode:
                 
 
     # Search for a specific node in the tree. Value to be searched by should be passed into the method.
-    def search_for_node(self, value_to_search):
-        current_node = self.data
-
-        while current_node != None:
-            if value_to_search < current_node:
-                current_node = self.left
-            elif value_to_search > current_node:
-                current_node = self.right
-            else:
-                return True
-        return False
+    def search_for_node(self, root, value_to_search):
+        if root is None:
+            print("Node not found")
+            return 
+        elif root.data == value_to_search:
+            print("Node Found!")
+            return
+        elif root.data > value_to_search:
+            print("Direction: Left")
+            return self.search_for_node(root.left, value_to_search)
+        else:
+            print("Direction Right")
+            return self.search_for_node(root.right, value_to_search)
 
